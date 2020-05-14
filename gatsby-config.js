@@ -10,5 +10,17 @@ module.exports = {
     title: "Musa Jundi Portfolio",
     author: "Musa Jundi",
   },
-  plugins: ["gatsby-plugin-sass"],
+  plugins: [
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `${__dirname}/src/`,
+      },
+    },
+    "gatsby-transformer-remark",
+    "gatsby-plugin-smoothscroll",
+  ],
 }

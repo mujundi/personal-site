@@ -2,15 +2,17 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
+import Head from "../components/head"
+import Hero from "../components/sections/hero"
+import About from "../components/sections/about"
+import Work from "../components/sections/work"
 
 const IndexPage = () => {
   return (
     <Layout>
-      <h1>Hello.</h1>
-      <h2>I'm Musa, a full-stack developer based in Dallas.</h2>
-      <p>
-        Need a developer? <Link to="/contact">Contact me.</Link>
-      </p>
+      <Hero />
+      <About />
+      <Work />
     </Layout>
   )
 }

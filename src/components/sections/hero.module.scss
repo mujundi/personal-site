@@ -1,0 +1,94 @@
+body {
+  color: #e6f1ff;
+}
+
+.hero {
+  background-color: #111;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.nav {
+  margin-top: -3.5rem;
+  min-width: 100px;
+  color: #e6f1ff;
+  float: right;
+  position: flex;
+}
+
+.hero > h1 {
+  margin-top: 9rem;
+}
+
+.social {
+  margin-top: 5em;
+  margin-bottom: 0.35em;
+  font-size: 40px;
+  text-align: right;
+}
+
+.social > * {
+  margin: 0 10px;
+}
+
+.name {
+  color: #64ffda;
+  font-weight: lighter;
+  float: none;
+  width: auto;
+  overflow: hidden;
+}
+
+.header {
+  color: #e6f1ff;
+}
+
+.item {
+  color: #b794de;
+  margin: 0 1.25em;
+}
+
+hr {
+  margin-bottom: 5em;
+  border-top: 2px solid #64ffda;
+  border-radius: 1px;
+
+  @media screen and (max-width: 650px) {
+    margin-bottom: 6em;
+  }
+}
+
+.hero > ul {
+  text-align: right;
+  list-style: none;
+}
+
+.hero > ul > li {
+  font-size: 0.9em;
+  transition: color 0.4s;
+  transition: margin 0.4s;
+}
+
+.hero > ul > li:hover {
+  @media screen and (min-width: 700px) {
+    margin-right: 6px;
+    color: #b794de;
+  }
+  cursor: pointer;
+}
+
+a > svg {
+  color: #e6f1ff;
+  transition: color 0.4s;
+}
+
+a > svg:hover {
+  color: #b794de;
+  @media screen and (min-width: 700px) {
+    color: #b794de;
+  }
+}
+
+a:visited {
+  color: #e6f1ff;
+}

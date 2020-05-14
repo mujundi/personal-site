@@ -1,0 +1,41 @@
+.duties {
+  font-size: 0.75rem;
+  list-style-type: circle;
+  max-width: 500px;
+}
+
+.duties > li {
+  margin-bottom: 3px;
+}
+
+.techs {
+  list-style: none;
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+.techs > li {
+  display: inline-block;
+  padding-left: 12px;
+  color: #b794de;
+}
+
+.job > h4,
+h5,
+h6 {
+  margin-bottom: 10px;
+}
+
+.job > h4 > span {
+  color: #64ffda;
+}
+
+.job > h5 {
+  font-weight: lighter;
+}
+
+.job {
+  @media screen and (max-width: 550px) {
+    padding-right: -24px;
+  }
+}
