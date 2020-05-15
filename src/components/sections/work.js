@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import {
   makeStyles,
@@ -12,22 +12,7 @@ import Box from "@material-ui/core/Box"
 
 import styles from "./work.module.scss"
 import Job from "../job"
-
-const jobs = {
-  boucher: {
-    title: "Research Scientist",
-    location: "Boucher Laboratory",
-    subject: "Bioinformatics",
-    start: "Aug. 2017",
-    end: "Mar. 2020",
-    duties: [
-      "Write programs to produce simulated metagenomic data for various tools we were developing",
-      "Work in both the high-performance computing remote cluster environment, and develop scripts to facilitate its use for other lab members",
-      "Seek out and test competing SNP detection tools, including development of protocols and testing methodology for all of the programs",
-    ],
-    techs: ["Python", "Bash"],
-  },
-}
+import jobs from "../../content/jobs"
 
 const theme = createMuiTheme({
   palette: {
@@ -83,17 +68,32 @@ const useStyles = makeStyles(theme => ({
     height: 350,
   },
   tabs: {
-    borderBottom: `1px solid #222`,
+    borderBottom: `1px solid #444`,
+    borderRight: "none",
   },
 }))
 
 export default function Work() {
-  const classes = useStyles()
   const [value, setValue] = React.useState(0)
+
+  const [isDesktop, setDesktop] = useState(
+    window.innerWidth > 750 ? "vertical" : "horizontal"
+  )
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 750 ? "vertical" : "horizontal")
+  }
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia)
+    return () => window.removeEventListener("resize", updateMedia)
+  })
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
   }
+
+  const classes = useStyles()
+  const orientation = isDesktop
+  console.log(isDesktop)
 
   return (
     <div id="work" className={styles.work}>
@@ -101,7 +101,7 @@ export default function Work() {
       <div className={classes.root + ` ${styles.workbox}`}>
         <ThemeProvider theme={theme}>
           <Tabs
-            orientation="horizontal"
+            orientation={orientation}
             variant="fullWidth"
             value={value}
             onChange={handleChange}
@@ -111,12 +111,9 @@ export default function Work() {
           >
             <Tab className={styles.tab} label="Boucher Lab" {...a11yProps(0)} />
             <Tab className={styles.tab} label="Freelance" {...a11yProps(1)} />
-            <Tab className={styles.tab} label="Kumar Lab" {...a11yProps(2)} />
-            <Tab
-              className={styles.tab}
-              label="Reynolds Lab"
-              {...a11yProps(3)}
-            />
+            <Tab className={styles.tab} label="Reynolds" {...a11yProps(2)} />
+            <Tab className={styles.tab} label="Kumar Lab" {...a11yProps(3)} />
+            <Tab className={styles.tab} label="UF E.E.D." {...a11yProps(3)} />
           </Tabs>
           <TabPanel className={styles.jobpanel} value={value} index={0}>
             <Job
@@ -127,16 +124,58 @@ export default function Work() {
               end={jobs.boucher.end}
               duties={jobs.boucher.duties}
               techs={jobs.boucher.techs}
+              pub={jobs.boucher.pub}
+              publink={jobs.boucher.publink}
             />
           </TabPanel>
           <TabPanel value={value} index={1}>
-            Item Two
+            <Job
+              title={jobs.freelance.title}
+              location={jobs.freelance.location}
+              subject={jobs.freelance.subject}
+              start={jobs.freelance.start}
+              end={jobs.freelance.end}
+              duties={jobs.freelance.duties}
+              techs={jobs.freelance.techs}
+            />
           </TabPanel>
           <TabPanel value={value} index={2}>
-            Item Three
+            <Job
+              title={jobs.reynolds.title}
+              location={jobs.reynolds.location}
+              subject={jobs.reynolds.subject}
+              start={jobs.reynolds.start}
+              end={jobs.reynolds.end}
+              duties={jobs.reynolds.duties}
+              techs={jobs.reynolds.techs}
+              pub={jobs.reynolds.pub}
+              publink={jobs.reynolds.publink}
+            />
           </TabPanel>
           <TabPanel value={value} index={3}>
-            Item Four
+            <Job
+              title={jobs.kumar.title}
+              location={jobs.kumar.location}
+              subject={jobs.kumar.subject}
+              start={jobs.kumar.start}
+              end={jobs.kumar.end}
+              duties={jobs.kumar.duties}
+              techs={jobs.kumar.techs}
+              pub={jobs.kumar.pub}
+              publink={jobs.kumar.publink}
+            />
+          </TabPanel>
+          <TabPanel value={value} index={4}>
+            <Job
+              title={jobs.ta.title}
+              location={jobs.ta.location}
+              subject={jobs.ta.subject}
+              start={jobs.ta.start}
+              end={jobs.ta.end}
+              duties={jobs.ta.duties}
+              techs={jobs.ta.techs}
+              syllabus={jobs.ta.syllabus}
+            />
           </TabPanel>
         </ThemeProvider>
       </div>

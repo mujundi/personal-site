@@ -1,7 +1,7 @@
 .duties {
   font-size: 0.75rem;
   list-style-type: circle;
-  max-width: 500px;
+  max-width: 550px;
 }
 
 .duties > li {
@@ -16,8 +16,28 @@
 
 .techs > li {
   display: inline-block;
-  padding-left: 12px;
+  padding-left: 14px;
   color: #b794de;
+}
+
+.pub {
+  font-size: 0.6rem;
+}
+
+.pub > p {
+  color: #777;
+}
+
+.publink {
+  text-decoration: none;
+}
+
+.publink:hover {
+  cursor: pointer;
+}
+
+.syllabus {
+  padding-left: 12px;
 }
 
 .job > h4,
