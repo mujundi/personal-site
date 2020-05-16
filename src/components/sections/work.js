@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     backgroundColor: "#111",
     display: "flexbox",
-    height: 350,
+    minHeight: 400,
   },
   tabs: {
     borderBottom: `1px solid #444`,
@@ -179,6 +179,7 @@ export default function Work() {
           </TabPanel>
         </ThemeProvider>
       </div>
+      <hr />
     </div>
   )
 }

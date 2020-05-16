@@ -1,0 +1,22 @@
+.container {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.at {
+  margin-top: 20px;
+  color: #b794de;
+}
+
+.social {
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  font-size: 60px;
+}
+
+.social > * {
+  margin: 0 30px;
+}

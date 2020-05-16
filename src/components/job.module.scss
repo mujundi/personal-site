@@ -1,7 +1,6 @@
 .duties {
   font-size: 0.75rem;
   list-style-type: circle;
-  max-width: 550px;
 }
 
 .duties > li {
@@ -36,10 +35,6 @@
   cursor: pointer;
 }
 
-.syllabus {
-  padding-left: 12px;
-}
-
 .job > h4,
 h5,
 h6 {
@@ -55,6 +50,7 @@ h6 {
 }
 
 .job {
+  margin-bottom: 20px;
   @media screen and (max-width: 550px) {
     padding-right: -24px;
   }

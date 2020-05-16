@@ -1,6 +1,5 @@
 .work {
   padding: 12px;
-
   @media screen and (max-width: 650px) {
     padding: 2px;
   }
@@ -60,4 +59,8 @@
     white-space: normal;
     padding: 0px !important;
   }
+}
+
+.work > hr {
+  margin-top: 5em;
 }
