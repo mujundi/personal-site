@@ -17,7 +17,11 @@ const Footer = () => {
     <footer className={styles.footer}>
       <p>Created by {data.site.siteMetadata.author}, © 2020</p>
       <div className={styles.btndiv}>
-        <a href="" target="_blank" className={styles.repobtn}>
+        <a
+          href="https://github.com/mujundi/personal-site"
+          target="_blank"
+          className={styles.repobtn}
+        >
           View this website's code!
         </a>
       </div>
