@@ -8,6 +8,9 @@ import About from "../components/sections/about"
 import Work from "../components/sections/work"
 import Projects from "../components/sections/projects"
 import Contact from "../components/sections/contact"
+import "@fortawesome/fontawesome-svg-core/styles.css"
+import { config } from "@fortawesome/fontawesome-svg-core"
+config.autoAddCss = false
 
 const IndexPage = () => {
   return (

@@ -1,4 +1,5 @@
 import React from "react"
+
 import TextLoop from "react-text-loop"
 import heroStyles from "./hero.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"

@@ -73,6 +73,7 @@ const useStyles = makeStyles(theme => ({
     borderRight: "none",
   },
 }))
+const isDesktop = "vertical"
 
 export default function Work() {
   const [value, setValue] = React.useState(0)
