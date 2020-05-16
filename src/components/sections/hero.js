@@ -1,5 +1,5 @@
 import React from "react"
-
+import { withPrefix } from "gatsby"
 import TextLoop from "react-text-loop"
 import heroStyles from "./hero.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -22,7 +22,13 @@ const Hero = () => {
         <li onClick={() => scrollTo("#projects")}>Projects</li>
         <li onClick={() => scrollTo("#contact")}>Contact</li>
         <li>
-          Resume <FontAwesomeIcon icon={faExternalLinkAlt} />
+          <a
+            rel="noopener noreferrer"
+            href={withPrefix("/resume.pdf")}
+            target="_blank"
+          >
+            Resume <FontAwesomeIcon icon={faExternalLinkAlt} />
+          </a>
         </li>
       </ul>
       <h1>

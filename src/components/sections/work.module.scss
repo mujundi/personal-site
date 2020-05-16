@@ -24,21 +24,27 @@
     padding: 0;
   }
 
-  @media screen and (min-width: 750px) {
-    display: flex !important;
-  }
+  // @media screen and (min-width: 750px) {
+  //   display: flex !important;
+  // }
 }
 
 .worktabs {
   overflow: visible !important;
-
-  @media screen and (min-width: 750px) {
-    border-right: 1px solid #444 !important;
-    border-bottom: none !important;
-  }
+  // @media screen and (min-width: 750px) {
+  //   border-right: 1px solid #444 !important;
+  //   border-bottom: none !important;
+  //   flex-direction: column !important;
+  // }
 }
 
 .tab {
+  min-height: 10px !important;
+  min-width: 20px !important;
+  text-align: center !important;
+  align-items: normal !important;
+  justify-content: center !important;
+
   @media screen and (max-width: 750px) {
     font-size: 0.7rem !important;
   }
@@ -48,17 +54,17 @@
 }
 
 .tab > * {
-  text-align: right !important;
+  text-align: center !important;
   align-items: normal !important;
-  justify-content: right !important;
+  justify-content: space-between !important;
 
-  @media screen and (max-width: 750px) {
-    text-align: center !important;
-    justify-content: center;
-    align-items: center !important;
-    white-space: normal;
-    padding: 0px !important;
-  }
+  // @media screen and (max-width: 750px) {
+  //   text-align: center !important;
+  //   justify-content: center;
+  //   align-items: center !important;
+  //   white-space: normal;
+  //   padding: 0px !important;
+  // }
 }
 
 .work > hr {

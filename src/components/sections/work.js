@@ -101,21 +101,34 @@ export default function Work() {
       <div className={classes.root + ` ${styles.workbox}`}>
         <ThemeProvider theme={theme}>
           <Tabs
-            orientation={orientation}
-            variant="fullWidth"
+            id="tabs"
+            orientation="horizontal"
+            variant="standard"
             value={value}
             onChange={handleChange}
             indicatorColor="primary"
             aria-label="tabs"
             className={classes.tabs + ` ${styles.worktabs}`}
           >
-            <Tab className={styles.tab} label="Boucher Lab" {...a11yProps(0)} />
             <Tab className={styles.tab} label="Freelance" {...a11yProps(1)} />
+            <Tab className={styles.tab} label="Boucher Lab" {...a11yProps(0)} />
             <Tab className={styles.tab} label="Reynolds" {...a11yProps(2)} />
             <Tab className={styles.tab} label="Kumar Lab" {...a11yProps(3)} />
             <Tab className={styles.tab} label="UF E.E.D." {...a11yProps(3)} />
           </Tabs>
-          <TabPanel className={styles.jobpanel} value={value} index={0}>
+
+          <TabPanel value={value} index={0}>
+            <Job
+              title={jobs.freelance.title}
+              location={jobs.freelance.location}
+              subject={jobs.freelance.subject}
+              start={jobs.freelance.start}
+              end={jobs.freelance.end}
+              duties={jobs.freelance.duties}
+              techs={jobs.freelance.techs}
+            />
+          </TabPanel>
+          <TabPanel className={styles.jobpanel} value={value} index={1}>
             <Job
               title={jobs.boucher.title}
               location={jobs.boucher.location}
@@ -126,17 +139,6 @@ export default function Work() {
               techs={jobs.boucher.techs}
               pub={jobs.boucher.pub}
               publink={jobs.boucher.publink}
-            />
-          </TabPanel>
-          <TabPanel value={value} index={1}>
-            <Job
-              title={jobs.freelance.title}
-              location={jobs.freelance.location}
-              subject={jobs.freelance.subject}
-              start={jobs.freelance.start}
-              end={jobs.freelance.end}
-              duties={jobs.freelance.duties}
-              techs={jobs.freelance.techs}
             />
           </TabPanel>
           <TabPanel value={value} index={2}>

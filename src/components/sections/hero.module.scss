@@ -72,18 +72,25 @@ hr {
 .hero > ul > li:hover {
   @media screen and (min-width: 700px) {
     margin-right: 6px;
-    color: #b794de;
+    color: #b794de !important;
   }
   cursor: pointer;
 }
 
 a {
   color: #e6f1ff;
+  text-decoration: none;
 }
 
 a > svg {
-  color: #e6f1ff;
-  transition: color 0.4s;
+  // color: #e6f1ff;
+}
+
+a:hover {
+  color: #b794de !important;
+  @media screen and (min-width: 700px) {
+    color: #b794de;
+  }
 }
 
 a > svg:hover {

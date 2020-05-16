@@ -6,10 +6,10 @@ export default {
     location: "Boucher Laboratory",
     subject: "Bioinformatics Lab, Dept. of CISE, University of Florida",
     start: "Aug. 2017",
-    end: "Mar. 2020",
+    end: "Aug. 2018",
     duties: [
       "Write programs to produce simulated metagenomic data for various tools we were developing",
-      "Work in both the high-performance computing remote cluster environment, and develop scripts to facilitate its use for other lab members",
+      "Work in the high-performance computing remote cluster environment, and develop scripts to facilitate its use for other lab members",
       "Seek out and test competing SNP detection tools, including development of protocols and testing methodology for all of the programs",
     ],
     techs: ["Python", "Bash"],
