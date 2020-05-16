@@ -65,7 +65,6 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     backgroundColor: "#111",
-    display: "flexbox",
     minHeight: 400,
   },
   tabs: {
@@ -73,7 +72,6 @@ const useStyles = makeStyles(theme => ({
     borderRight: "none",
   },
 }))
-const isDesktop = "vertical"
 
 export default function Work() {
   const [value, setValue] = React.useState(0)
@@ -103,7 +101,7 @@ export default function Work() {
       <div className={classes.root + ` ${styles.workbox}`}>
         <ThemeProvider theme={theme}>
           <Tabs
-            orientation={orientation ? orientation : defaultOrientation}
+            orientation={orientation}
             variant="fullWidth"
             value={value}
             onChange={handleChange}
