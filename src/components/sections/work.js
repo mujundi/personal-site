@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import window from "global"
 import PropTypes from "prop-types"
 import {
   makeStyles,
