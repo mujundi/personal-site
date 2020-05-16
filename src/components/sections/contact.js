@@ -6,7 +6,7 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 
 const Contact = () => {
   return (
-    <div className={styles.container}>
+    <div id="contact" className={styles.container}>
       <h2>Contact Me</h2>
       <h3 className={styles.at}>musajundi@gmail.com</h3>
       <div className={styles.social}>

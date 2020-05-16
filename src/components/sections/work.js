@@ -95,7 +95,7 @@ export default function Work() {
 
   const classes = useStyles()
   const orientation = isDesktop
-  console.log(isDesktop)
+  const defaultOrientation = window.innerWidth > 750 ? "vertical" : "horizontal"
 
   return (
     <div id="work" className={styles.work}>
@@ -103,12 +103,12 @@ export default function Work() {
       <div className={classes.root + ` ${styles.workbox}`}>
         <ThemeProvider theme={theme}>
           <Tabs
-            orientation={orientation}
+            orientation={orientation ? orientation : defaultOrientation}
             variant="fullWidth"
             value={value}
             onChange={handleChange}
             indicatorColor="primary"
-            aria-label="Vertical tabs"
+            aria-label="tabs"
             className={classes.tabs + ` ${styles.worktabs}`}
           >
             <Tab className={styles.tab} label="Boucher Lab" {...a11yProps(0)} />

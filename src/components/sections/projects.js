@@ -8,7 +8,7 @@ import Project from "../project"
 const Projects = () => {
   return (
     <div>
-      <div className={styles.container}>
+      <div id="projects" className={styles.container}>
         <h2>Projects</h2>
         <div className={styles.projects}>
           <div>
