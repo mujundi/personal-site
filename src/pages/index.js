@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
@@ -15,6 +14,12 @@ config.autoAddCss = false
 const IndexPage = () => {
   return (
     <Layout>
+      <Head
+        title="Musa Jundi Portfolio"
+        author="Musa Jundi"
+        description="Musa Jundi is a developer with experience building tools and web apps with varied applications. Check out the rest of Musa Jundi's personal website and his GitHub and LinkedIn profiles for more information."
+        siteUrl="https://www.musajundi.com"
+      />
       <Hero />
       <About />
       <Work />

@@ -92,8 +92,8 @@ export default function Work() {
   }
 
   const classes = useStyles()
-  const orientation = isDesktop
-  const defaultOrientation = window.innerWidth > 750 ? "vertical" : "horizontal"
+  // const orientation = isDesktop
+  // const defaultOrientation = window.innerWidth > 750 ? "vertical" : "horizontal"
 
   return (
     <div id="work" className={styles.work}>

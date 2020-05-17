@@ -9,6 +9,9 @@ module.exports = {
   siteMetadata: {
     title: "Musa Jundi Portfolio",
     author: "Musa Jundi",
+    description:
+      "Musa Jundi is a developer with experience building tools and web apps with varied applications. Check out the rest of Musa Jundi's personal website and his GitHub and LinkedIn profiles for more information.",
+    siteUrl: "https://www.musajundi.com/",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
