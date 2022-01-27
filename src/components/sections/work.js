@@ -110,14 +110,25 @@ export default function Work() {
             aria-label="tabs"
             className={classes.tabs + ` ${styles.worktabs}`}
           >
+            <Tab className={styles.tab} label="State Farm" {...a11yProps(4)} />
             <Tab className={styles.tab} label="Freelance" {...a11yProps(1)} />
             <Tab className={styles.tab} label="Boucher Lab" {...a11yProps(0)} />
             <Tab className={styles.tab} label="Reynolds" {...a11yProps(2)} />
             <Tab className={styles.tab} label="Kumar Lab" {...a11yProps(3)} />
             <Tab className={styles.tab} label="UF E.E.D." {...a11yProps(3)} />
           </Tabs>
-
           <TabPanel value={value} index={0}>
+            <Job
+              title={jobs.statefarm.title}
+              location={jobs.statefarm.location}
+              subject={jobs.statefarm.subject}
+              start={jobs.statefarm.start}
+              end={jobs.statefarm.end}
+              duties={jobs.statefarm.duties}
+              techs={jobs.statefarm.techs}
+            />
+          </TabPanel>
+          <TabPanel value={value} index={1}>
             <Job
               title={jobs.freelance.title}
               location={jobs.freelance.location}
@@ -128,7 +139,7 @@ export default function Work() {
               techs={jobs.freelance.techs}
             />
           </TabPanel>
-          <TabPanel className={styles.jobpanel} value={value} index={1}>
+          <TabPanel className={styles.jobpanel} value={value} index={2}>
             <Job
               title={jobs.boucher.title}
               location={jobs.boucher.location}
@@ -141,7 +152,7 @@ export default function Work() {
               publink={jobs.boucher.publink}
             />
           </TabPanel>
-          <TabPanel value={value} index={2}>
+          <TabPanel value={value} index={3}>
             <Job
               title={jobs.reynolds.title}
               location={jobs.reynolds.location}
@@ -154,7 +165,7 @@ export default function Work() {
               publink={jobs.reynolds.publink}
             />
           </TabPanel>
-          <TabPanel value={value} index={3}>
+          <TabPanel value={value} index={4}>
             <Job
               title={jobs.kumar.title}
               location={jobs.kumar.location}
@@ -167,7 +178,7 @@ export default function Work() {
               publink={jobs.kumar.publink}
             />
           </TabPanel>
-          <TabPanel value={value} index={4}>
+          <TabPanel value={value} index={5}>
             <Job
               title={jobs.ta.title}
               location={jobs.ta.location}

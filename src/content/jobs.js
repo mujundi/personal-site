@@ -1,12 +1,29 @@
 import React from "react"
 
 export default {
+  statefarm: {
+    title: "Software Engineer II",
+    location: "State Farm",
+    subject: "Richardson, TX (Remote)",
+    start: "Jul. 2020",
+    end: "Current",
+    duties: [
+      "Started as a Software Developer on a team that owns the apps used by our auto-insurance policy holders. I've been promoted twice within this team since I started in 2020.",
+      "Deliver performance improvements and bug fixes to our back-end apps written in Java, including the automation of several customer-facing flows (e.g. replacing a vehicle on an insurance policy).",
+      "Migrate the features that use a Java-based UI to Angular. This involves creating new REST API endpoints within our Java application, and the creation of new web pages using Angular.",
+      "Improved the regression test automation by creating scripts that leverage the Postman CLI to run through hundreds of API calls, reducing the time needed to verify the API endpoints from several hours (manual testing) to just minutes.",
+      "Mentoring interns, as well as leading AWS study groups for peers who are seeking AWS certifications.",
+      "Improve our pipelines for deployment by migrating them from the Jenkins platform to Gitlab. In the best cases, the pipelines ran in just 1/10th the time after the improvements were made.",
+      "Improved the in-code (JDoc) and out-of-code (wiki) documentation for our apps and common procedures.",
+    ],
+    techs: ["Spring (Java)", "Angular (JS)", "CSS", "HTML", "REST APIs"],
+  },
   boucher: {
-    title: "Research Scientist",
+    title: "Bioinformatics Researcher",
     location: "Boucher Laboratory",
     subject: "Bioinformatics Lab, Dept. of CISE, University of Florida",
-    start: "Aug. 2017",
-    end: "Aug. 2018",
+    start: "2017",
+    end: "2018",
     duties: [
       "Write programs to produce simulated metagenomic data for various tools we were developing",
       "Work in the high-performance computing remote cluster environment, and develop scripts to facilitate its use for other lab members",
@@ -21,7 +38,7 @@ export default {
     location: "Freelance",
     subject: "Remote",
     start: "2014",
-    end: "Current",
+    end: "2019",
     duties: [
       "Developed static sites and tools for small businesses, sometimes using a headless CMS to provide security and convenience.",
       "Led a small remote team to build a static site and custom dynamic dashboard for a logistics company",

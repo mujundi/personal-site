@@ -21,7 +21,6 @@ export default {
     description:
       "An expense-tracking app that includes authentication, persistent data storage, and dynamic expense displays and filtering.",
     techs: ["React, Redux, Node, Firebase"],
-    liveUrl: "https://xpnsr.herokuapp.com/",
     repoUrl: "https://github.com/mujundi/xpnsr",
   },
   four: {
